@@ -3,9 +3,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts
   def index
-    @contacts = Contact.all
-
-    render json: @contacts, include: [:kind]
+    render json: Contact.all, include: [:kind]
   end
 
   # GET /contacts/1
